@@ -1,0 +1,417 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url("../fonts/Nunitoregular.woff");
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url("../fonts/Nunitobold.woff");
+    font-weight: bold;
+}
+
+body {
+    font-family: Nunito, sans-serif;
+}
+
+.layout {
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar {
+    flex-shrink: 0;
+    width: 250px;
+    background: #F7F7F7;
+    padding: 0 17px;
+    border-right: 2px solid #E2E2E2;
+    position: relative;
+}
+
+.logo {
+    padding: 25px 0 27px 0;
+    text-align: center;
+    display: block;
+}
+
+.navigation ul {
+    list-style: none;
+}
+
+.navigation-item.active a,
+.navigation-item a:hover {
+    background: #467DF2;
+    border-radius: 5px;
+}
+
+.navigation-item:hover a span {
+    color: #FFFFFF;
+}
+
+.navigation-item:hover a svg path {
+    fill: #FFFFFF;
+}
+
+
+.navigation-item a {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    padding: 13px 15px;
+}
+
+.navigation-item a .active-white {
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.navigation-item a span {
+    font-size: 14px;
+    line-height: 19px;
+    color: #858796;
+    margin-left: 10px;
+}
+
+.info {
+    width: 217px;
+    padding: 14px 12px 13px 12px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 20px;
+    left: 30px;
+}
+
+.info:hover {
+    border: 1px solid #467DF2;
+}
+
+.info img {
+    float: left;
+    margin-right: 6px;
+    margin-bottom: 7px;
+}
+
+.info-text {
+    text-align: left;
+    font-size: 14px;
+    line-height: 19px;
+    color: #4F4E4F;
+}
+
+.info-text a {
+    text-decoration: none;
+    color: rgba(0, 66, 235, 1);
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.header {
+    background: #F7F7F7;
+    padding: 15px 41px 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #E2E2E2;;
+}
+
+.header .menu {
+    display: flex;
+}
+
+.header .menu-right {
+    display: flex;
+    align-items: center;
+}
+
+
+.header .menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .menu ul .menu-stripes {
+    margin-right: 60px;
+    display: flex;
+}
+
+.header .menu ul .menu-stripes a svg:hover rect {
+    fill: #3D63D2;
+}
+
+.header .menu ul .menu-action {
+    margin-right: 40px;
+}
+
+.header .menu ul .menu-action .menu-text.blue-text {
+    font-size: 14px;
+    line-height: 19px;
+    color: #858796;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.header .menu ul .menu-action .menu-text.blue-text:hover .menu-action-result {
+    display: block;
+}
+
+.header .menu ul .menu-action .menu-text.blue-text:hover {
+    color: #3D63D2;
+}
+
+.header .menu ul .menu-text.blue-text svg {
+    margin-left: 5px;
+
+}
+
+.header .menu ul .menu-text.blue-text svg:hover path {
+    fill: #3D63D2;
+}
+
+.menu-action-result {
+    display: none;
+    position: absolute;
+    background: #FFFFFF;
+    box-shadow: 0 4px 20px rgba(102, 102, 102, 0.15);
+    border-radius: 10px;
+    padding: 30px 30px 30px 20px;
+    width: 150px;
+    box-sizing: border-box;
+    top: 38px;
+    left: -16px;
+    z-index: 1;
+}
+
+.menu-action-result-item {
+    font-size: 14px;
+    line-height: 19px;
+    color: #686464;
+    margin-bottom: 15px;
+}
+
+.menu-action-result-item:last-child {
+    margin-bottom: 0;
+}
+
+
+.header-search {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+.header-search svg {
+    position: absolute;
+    top: 13px;
+    left: 20px;
+}
+
+.header-search-input {
+    box-sizing: border-box;
+    background: #EFEFF5;
+    border: 1px solid #E2E2E2;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 19px;
+    color: #B3B3B3;
+    padding: 12px 20px 14px 44px;
+    outline: none;
+    width: 373px;
+    height: 40px;
+}
+
+.header-search-input::placeholder {
+    color: #B3B3B3;
+}
+
+.statistic {
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.statistic a svg:hover path {
+    fill: #467DF2;
+}
+
+button.button-blue {
+    background: #467DF2;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+    padding: 10px 0 10px 0;
+    width: 87px;
+    border: 0;
+    cursor: pointer;
+}
+
+button.button-blue:hover {
+    background: #2F54A3;
+    border-radius: 10px;
+    border: 0;
+}
+
+.container {
+    padding: 25px 35px 53px 35px;
+    background: #E5E5E5;
+    position: relative;
+}
+
+.block-title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 48px;
+    color: #4F4E4F;
+    margin-bottom: 20px;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.design-card {
+    width: 350px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.design-card:hover {
+    box-shadow: 0 4px 20px rgba(102, 102, 102, 0.15);
+}
+
+.design-card-image-text {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+
+.design-card-image-text.white {
+    background: rgba(247, 247, 247, 0.8);
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 14px;
+    color: #4F4E4F;
+    padding: 4px 10px;
+    width: 115px;
+    text-align: center;
+}
+
+.design-card-image-text.red {
+    background: rgba(255, 188, 188, 0.8);
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 14px;
+    color: #DB0C0C;
+    padding: 4px 10px;
+    width: 118px;
+    text-align: center;
+}
+
+.design-card-image-text.green {
+    background: #C6E0C3;
+    border-radius: 5px;
+    line-height: 14px;
+    color: #027900;
+    padding: 4px 10px;
+    width: 83px;
+    text-align: center;
+}
+
+.design-item {
+    padding: 20px 26px 21px 26px;
+}
+
+.design-title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    color: #4F4E4F;
+    margin-bottom: 8px;
+}
+
+.design-extra {
+    font-size: 15px;
+    line-height: 30px;
+    color: #4F4E4F;
+    margin-bottom: 18px;
+}
+
+.design-icon svg {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.design-icon svg:last-child {
+    margin-right: 0;
+}
+
+.design-icon svg:hover path {
+    fill: #3D63D2;
+}
+
+.design-icon svg:hover ellipse {
+    fill: #3D63D2;
+}
+
+.container .support {
+    box-sizing: border-box;
+    position: absolute;
+    background: #467DF2;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    transform: rotate(-90deg);
+    width: 186px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    top: 332px;
+    right: -75px;
+    cursor: pointer;
+}
+
+.container .support a {
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.container .support svg {
+    transform: rotate(90deg);
+    margin-right: 10px;
+}
+
+.container .support:hover {
+    background: #2F54A3;
+    border-radius: 10px 10px 0 0;
+    width: 186px;
+    height: 49px;
+    padding: 10px 20px 20px 20px;
+}
+
